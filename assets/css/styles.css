@@ -44,7 +44,7 @@
     --mb-0-75: .75rem;
     --mb-1: 1rem;
     --mb-1-5: 1.5rem;
-    --mb--2: 2rem;
+    --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
 
@@ -100,6 +100,8 @@ body.dark-theme{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+    user-select: none;
  }
 
  html{
@@ -328,11 +330,11 @@ body.dark-theme{
 }
 
 .home__description{
-    margin-bottom: var(--mb--2);
+    margin-bottom: var(--mb-2);
 }
 
 .home__scroll{
-    display: none;
+    display: inline;
 }
 
 .home__scroll-button{
@@ -365,7 +367,7 @@ body.dark-theme{
     display: inline-block;
     background-color: var(--first-color);
     color: #FFF;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
 }
@@ -380,9 +382,19 @@ body.dark-theme{
     transition: .3s;
 }
 
+
 .button--flex{
     display: inline-flex;
     align-items: center;
+}
+
+.button--white{    
+    background-color: #FFF;
+    color: var(--first-color);    
+}
+
+.button--white:hover{
+    background-color: #FFF;
 }
 
 .button--small{
@@ -573,7 +585,7 @@ body.dark-theme{
 .qualification__tabs{
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: var(--mb--2);
+    margin-bottom: var(--mb-2);
 }
 
 .qualification__button{
@@ -739,4 +751,191 @@ body.dark-theme{
 .active-modal{
     opacity: 1;
     visibility: visible;
+}
+
+/* ========== PORTFOLIO ========== */
+.portfolio__container{
+    overflow: initial;
+}
+
+.portfolio__content{
+    padding: 0 1.5rem;
+}
+
+.portfolio__img{
+    width: 365px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+.portfolio__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.portfolio__description{
+    margin-bottom: var(--mb-0-75);
+}
+
+.portfolio__button:hover .button__icon{
+    transform: translateX(.25rem);
+}
+
+.portfolio__data{    
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+    margin-top: var(--mb-3)
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    display: none;
+}
+
+.uil-angle-right-b::before,
+.uil-angle-left-b::before{
+    margin-top: 20px;
+}
+
+.uil-angle-right-b::before{
+    margin-right: -28px;
+}
+
+.uil-angle-left-b::before{
+    margin-left: -24px;
+}
+
+.swiper-portfolio-icon{    
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+/* ========== PROJETO EM MENTE ========== */
+.project{
+    text-align: center
+}
+
+.project__bg{
+    background-color: var(--first-color-second);
+    padding-top: 3rem;
+}
+
+.project__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.project__description{
+    margin-bottom: var(--mb-1-5);
+}
+
+.project__title,
+.project__description{
+    color: #FFF;
+}
+
+.project__img{
+     width: 332px;
+     justify-self: center;
+}
+
+.button__contact--me{
+    display: flex;
+    justify-self: center;
+    width: 148px;
+    margin-bottom: var(--mb-1-5);
+}
+
+/* =========== INDICAÇÕES =========== */
+.testimonial__data,
+.testimonial__header{
+    display: flex;
+}
+
+.testimonial__data{
+    justify-content: space-between;
+    margin-bottom: var(--mb-1);
+}
+
+.testimonial__img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: var(--mb-0-75);
+}
+
+.testimonial__name{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.testimonial__client{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.testimonial__content{
+    padding: 0 2rem;
+}
+
+.testimonial__description{
+    margin-bottom: var(--mb-2-5);
+}
+
+.testimonial__icon-star{
+    color: var(--first-color);
+    background-color: yellow;
+}
+
+.swiper-pagination-testimonial{
+    bottom: 0;
+}
+
+/* =========== CONTATE ME =========== */
+.contact__container{
+    row-gap: 3rem;
+}
+
+.contact__information{
+    display: flex;
+    margin-bottom: var(--mb-2)
+}
+
+.contact__icon{
+    font-size: 2rem;
+    color:var(--first-color);
+    margin-right: var(--mb-0-75);
+}
+
+.contact__title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.contact__subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.contact__content{
+    background-color: var(--input-color);
+    border-radius: .5rem;
+    padding: .75rem .1rem .25rem;
+}
+
+.contact__label{
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+}
+
+.contact__input{
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .25rem 0;
 }

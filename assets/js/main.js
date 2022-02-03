@@ -74,7 +74,7 @@ function scrollTop(){
     // Quando a rolagem for maior que 560 da altura da janela de visualização, adicione a classe show-scroll à tag a com a classe scroll-top
     if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
-window.addEventListener('scroll', scrollTop)
+// window.addEventListener('scroll', scrollTop)
 
 /*==================== PEGANDO OS DADOS DO HMTL TEMA ESCURO - DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
@@ -123,9 +123,41 @@ modalBtns.forEach((modalBtn, i) => {
 })
 
 modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener('click', () => {
+    modalClose.addEventListener('click', () => { 
         modalViews.forEach((modalView) => {
             modalView.classList.remove('active-modal')
         })
     })
 })
+
+/* =========== PORTFOLIO =========== */
+let swiperPortfolio = new Swiper('.portfolio__container', {
+    cssMode: true,
+    loop: true,
+
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    },
+});
+
+/* =========== INDICAÇÕES =========== */
+let swiperTestimonial = new Swiper('.testimonial__container', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    },
+    breakpoints: {
+        568:{
+            slidesPerView: 2,
+        }
+    }
+});
