@@ -885,7 +885,6 @@ body.dark-theme{
 
 .testimonial__icon-star{
     color: var(--first-color);
-    background-color: yellow;
 }
 
 .swiper-pagination-testimonial{
