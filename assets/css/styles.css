@@ -788,23 +788,6 @@ body.dark-theme{
     margin-top: var(--mb-3)
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after{
-    display: none;
-}
-
-.uil-angle-right-b::before,
-.uil-angle-left-b::before{
-    margin-top: 20px;
-}
-
-.uil-angle-right-b::before{
-    margin-right: -28px;
-}
-
-.uil-angle-left-b::before{
-    margin-left: -24px;
-}
 
 .swiper-portfolio-icon{    
     font-size: 2rem;
